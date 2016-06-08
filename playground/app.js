@@ -55,6 +55,12 @@ class App extends Component {
 
     const form = activeFormId !== undefined ? forms[activeFormId] : null;
 
+    if (form) {
+      console.log("Passed in form data");
+      console.log(form.formData);
+    }
+
+
     return (
       <div className="container-fluid">
         <a href="#" onClick={ this.switchForm.bind(this, "large") }>Large</a>
